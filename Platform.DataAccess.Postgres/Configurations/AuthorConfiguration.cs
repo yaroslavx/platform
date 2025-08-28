@@ -12,6 +12,7 @@ public class AuthorConfiguration : IEntityTypeConfiguration<AuthorEntity>
 
         builder
             .HasOne(a => a.Course)
-            .WithOne(c => c.Author);
+            .WithOne(c => c.Author)
+            .HasForeignKey<CourseEntity>(a => a.AuthorId);
     }
 }
