@@ -1,0 +1,16 @@
+{
+  "Games": [
+    {
+      "UserId": 1,
+      "FavoriteGame": "Game 1"
+    }, 
+    {
+      "UserId": 2,
+      "FavoriteGame": "Game 2"
+    }, 
+    {
+      "UserId": 3,
+      "FavoriteGame": "Game 3"
+    }
+  ]
+}

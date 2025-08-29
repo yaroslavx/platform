@@ -1,0 +1,16 @@
+{
+  "Locations": [
+    {
+      "UserId": 1,
+      "LocationName": "Location 1"
+    },
+    {
+      "UserId": 2,
+      "LocationName": "Location 2"
+    },
+    {
+      "UserId": 3,
+      "LocationName": "Location 3"
+    }
+  ]
+}

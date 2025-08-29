@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.DataAccess.Postgres", "Platform.DataAccess.Postgres\Platform.DataAccess.Postgres.csproj", "{C41F9C80-5A51-4D7D-A6B9-6B89C5F67FD9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.API", "Platform.API\Platform.API.csproj", "{33B429FD-F96D-41B2-946A-089568F4EA6C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{7549371D-CE27-451F-AA1F-747A41A15277}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,13 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C41F9C80-5A51-4D7D-A6B9-6B89C5F67FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C41F9C80-5A51-4D7D-A6B9-6B89C5F67FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C41F9C80-5A51-4D7D-A6B9-6B89C5F67FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C41F9C80-5A51-4D7D-A6B9-6B89C5F67FD9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{33B429FD-F96D-41B2-946A-089568F4EA6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33B429FD-F96D-41B2-946A-089568F4EA6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33B429FD-F96D-41B2-946A-089568F4EA6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33B429FD-F96D-41B2-946A-089568F4EA6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7549371D-CE27-451F-AA1F-747A41A15277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7549371D-CE27-451F-AA1F-747A41A15277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7549371D-CE27-451F-AA1F-747A41A15277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7549371D-CE27-451F-AA1F-747A41A15277}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
