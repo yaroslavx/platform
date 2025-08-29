@@ -1,14 +1,9 @@
-using Microsoft.EntityFrameworkCore;
 using Platform.DataAccess.Postgres;
 
 var builder = WebApplication.CreateBuilder(args);
-var configuration = builder.Configuration;
 
 builder.Services.AddOpenApi();
-builder.Services.AddDbContext<PlatformDbContext>(options =>
-{
-    options.UseNpgsql(configuration.GetConnectionString(nameof(PlatformDbContext)));
-});
+builder.Services.AddDbContext<PlatformDbContext>();
 
 var app = builder.Build();
 

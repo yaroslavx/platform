@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Platform.DataAccess.Postgres.Configurations;
 using Platform.DataAccess.Postgres.Models;
 
@@ -6,9 +8,11 @@ namespace Platform.DataAccess.Postgres;
 
 public class PlatformDbContext : DbContext
 {
-    public PlatformDbContext(DbContextOptions<PlatformDbContext> options) : base(options)
+    private readonly IConfiguration _configuration;
+
+    public PlatformDbContext(IConfiguration configuration)
     {
-        
+        _configuration = configuration;
     }
     
     public DbSet<CourseEntity> Courses { get; set; }
@@ -17,10 +21,14 @@ public class PlatformDbContext : DbContext
     public DbSet<StudentEntity> Student { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {  
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(PlatformDbContext).Assembly);
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        modelBuilder.ApplyConfiguration(new CourseConfiguration());
-        modelBuilder.ApplyConfiguration(new StudentConfiguration());
-        modelBuilder.ApplyConfiguration(new AuthorConfiguration());
-        modelBuilder.ApplyConfiguration(new LessonConfiguration());
+        optionsBuilder
+            .UseNpgsql(_configuration.GetConnectionString(nameof(PlatformDbContext)))
+            .EnableSensitiveDataLogging();
     }
 }
