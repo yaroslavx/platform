@@ -18,7 +18,7 @@ public class PlatformDbContext : DbContext
     public DbSet<CourseEntity> Courses { get; set; }
     public DbSet<LessonEntity> Lessons { get; set; }
     public DbSet<AuthorEntity> Authors { get; set; }
-    public DbSet<StudentEntity> Student { get; set; }
+    public DbSet<StudentEntity> Students { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {  
